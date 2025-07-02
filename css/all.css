@@ -1,6 +1,6 @@
 :root {
     --primary-color: #30B1C4;
-    --secondary-color: #A3C7A3;
+    --secondary-color: #54c392;
     --third-color: #000000;
     --fourth-color: #ffffff;
 }
@@ -308,7 +308,7 @@
     justify-content: space-between;
 }
 
-.row > .col {
+.row>.col {
     display: flex;
 }
 
@@ -340,14 +340,15 @@ img {
 /* CSS Footer */
 
 .footer {
-  background-color: var(--primary-color);
-  color: white;
+    background-color: var(--primary-color);
+    color: white;
 }
 
 .footer-img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
 }
 
 .footer p {
@@ -355,20 +356,45 @@ img {
 }
 
 .footer i {
-  color: white;
+    color: white;
 }
 
-.footer a {
-  color: white;
-  text-decoration: none;
+.social-icons a i {
+    transition: color 0.3s ease;
 }
 
-.footer a:hover {
-  color: var(--third-color);
+.social-icons a:hover i {
+    color: var(--third-color);
 }
+
+/* Untuk tablet (layar sedang antara 768px - 1199px) */
+@media (max-width: 1199.98px) {
+    .footer-img {
+        width: 140px;
+        max-height: 140px;
+        margin-bottom: 1rem;
+    }
+
+    .footer .col-md-2 {
+        justify-content: center !important;
+    }
+}
+
 
 @media (max-width: 767.98px) {
-  .footer-img {
-    margin-bottom: 1rem;
+    .footer-img {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
